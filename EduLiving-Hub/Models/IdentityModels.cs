@@ -25,6 +25,12 @@ namespace EduLiving_Hub.Models
         {
         }
 
+        public DbSet<Recipe> Recipes { get; set; }
+
+        public DbSet<Ingredients> Ingredient { get; set; }
+
+        public DbSet<RecipeIngredients> RecipeIngredient { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

@@ -1,0 +1,15 @@
+﻿@model EduLiving_Hub.Models.IngredientsDto
+
+<h2>Ingredient Details</h2>
+
+<div>
+    <h4>@Model.name</h4>
+    <p>@Model.Description</p>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IngredientID }) |
+    @Html.ActionLink("Back to List", "List")
+</p>
+
+
