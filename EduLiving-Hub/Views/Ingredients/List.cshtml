@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EduLiving_Hub.Models.IngredientsDto>
+
+<h2>Ingredients List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ingredients in Model)
+        {
+            <tr>
+                <td>@ingredients.IngredientID</td>
+                <td>@ingredients.IngredientName</td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = ingredients.IngredientID }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = ingredients.IngredientID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = ingredients.IngredientID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
