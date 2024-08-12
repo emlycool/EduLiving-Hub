@@ -12,8 +12,8 @@ namespace EduLiving_Hub.Models
         public int GenreId { get; set; }
         public string Name { get; set; }
 
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 
     public class GenreDto
@@ -21,7 +21,7 @@ namespace EduLiving_Hub.Models
         [Key]
         public int GenreId { get; set; }
         public string Name { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }

@@ -17,8 +17,8 @@ namespace EduLiving_Hub.Models
         public string Title { get; set; }
         public int PublishDate { get; set; }
         public string Plot { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         //FOREIGN KEYS
 
@@ -40,8 +40,8 @@ namespace EduLiving_Hub.Models
         public int PublishDate { get; set; }
 
         public string Plot { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public AuthorDto Author { get; set; }
         public GenreDto Genre { get; set; }
 

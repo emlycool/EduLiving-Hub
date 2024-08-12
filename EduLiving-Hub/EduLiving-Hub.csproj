@@ -215,6 +215,10 @@
     <Compile Include="Migrations\202408092014239_RecipeCreate.Designer.cs">
       <DependentUpon>202408092014239_RecipeCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408111730543_updatedModels.cs" />
+    <Compile Include="Migrations\202408111730543_updatedModels.Designer.cs">
+      <DependentUpon>202408111730543_updatedModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -389,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408092014239_RecipeCreate.resx">
       <DependentUpon>202408092014239_RecipeCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408111730543_updatedModels.resx">
+      <DependentUpon>202408111730543_updatedModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -13,8 +13,8 @@ namespace EduLiving_Hub.Models
         public string Name { get; set; }
         public string Bio { get; set; }
 
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         //an author can have many books written by him/her
         public ICollection<Book> Books { get; set; }
@@ -25,8 +25,8 @@ namespace EduLiving_Hub.Models
         public int AuthorId { get; set; }
         public string Name { get; set; }
         public string Bio { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         //public ICollection<Book> Books { get; set; }
 
     }
