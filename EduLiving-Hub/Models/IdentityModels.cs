@@ -1,5 +1,8 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.Linq;
 using System.Security.Claims;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -25,9 +28,60 @@ namespace EduLiving_Hub.Models
         {
         }
 
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
+
+        public DbSet<PropertyListing> PropertyListings { get; set; }
+        public DbSet<Media> Media { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+
+        public DbSet<Ingredients> Ingredient { get; set; }
+
+        public DbSet<RecipeIngredients> RecipeIngredient { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+        public override int SaveChanges()
+        {
+            // Set CreatedAt & UpdatedAt on PropertyListing
+            var entries = ChangeTracker.Entries()
+                .Where(e => e.Entity is PropertyListing &&
+                            (e.State == EntityState.Added || e.State == EntityState.Modified));
+
+            foreach (var entry in entries)
+            {
+                var entity = (PropertyListing)entry.Entity;
+                if (entry.State == EntityState.Added)
+                {
+                    entity.CreatedAt = DateTime.UtcNow;
+                }
+                entity.UpdatedAt = DateTime.UtcNow;
+            }
+
+            return base.SaveChanges();
+        }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+        {
+            var entries = ChangeTracker.Entries()
+                .Where(e => e.Entity is PropertyListing &&
+                            (e.State == EntityState.Added || e.State == EntityState.Modified));
+
+            foreach (var entry in entries)
+            {
+                var entity = (PropertyListing)entry.Entity;
+                if (entry.State == EntityState.Added)
+                {
+                    entity.CreatedAt = DateTime.UtcNow;
+                }
+                entity.UpdatedAt = DateTime.UtcNow;
+            }
+
+            return base.SaveChangesAsync(cancellationToken);
         }
     }
 }

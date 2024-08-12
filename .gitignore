@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+EduLiving-Hub/APP_DATA/*.mdf
+EduLiving-Hub/APP_DATA/*.idf
+EduLiving-Hub/Uploads

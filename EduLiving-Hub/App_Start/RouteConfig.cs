@@ -11,6 +11,9 @@ namespace EduLiving_Hub
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            // Enable attribute routing
+            routes.MapMvcAttributeRoutes();
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
