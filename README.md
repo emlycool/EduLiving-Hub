@@ -24,7 +24,7 @@ To set up and run the application locally, follow these steps:
 
 - Accommodation- PropertyListing Controllers, models, views (Joshua)
 - Learn - Library System Controllers, Models, Views (Ritika)
-- Nutrition- Recipe, ingredients, COntrollers, Models, Views(Jaskaran Kaur)
+- Nutrition- Recipe, Ingredients, Controllers, Models, Views(Jaskaran Kaur)
 
 # Pending Items
 
