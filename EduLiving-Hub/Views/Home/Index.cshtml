@@ -2,32 +2,69 @@
     ViewBag.Title = "Home Page";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+<style>
+    .main-heading {
+        color: darkblue
+    }
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
-    </div>
+    .link-box {
+        display: flex;
+        gap: 2em;
+    }
+
+        .link-box > li {
+            padding: 4em;
+            border: 2px solid #f2e9e8;
+            border-radius: 10px;
+            list-style: none;
+            margin: 2em 0em;
+            width: 30%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+         .link-box > li:nth-child(1):hover {
+                opacity: 0.9;
+                background-size: contain;
+                background-image: url('https://images.unsplash.com/photo-1719310469053-8c5c0c6803d3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJvb2tzaGVsZnxlbnwwfDB8MHx8fDA%3D');
+          }
+
+            .link-box > li:nth-child(2):hover {
+                background-size: contain;
+                opacity: 0.9;
+                background-image: url('https://images.unsplash.com/photo-1577308873518-7fd772788ec6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGZvb2QlMjB0YWJsZXxlbnwwfDB8MHx8fDA%3D');
+            }
+
+            .link-box > li:nth-child(3):hover {
+                opacity: 0.9;
+                background-size: contain;
+                background-image: url('https://images.unsplash.com/photo-1646948683246-2abacf9007c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGFjY29tb2RhdGlvbnxlbnwwfDB8MHx8fDA%3D');
+            }
+
+            .link-box > li > a {
+                background-color: white;
+            }
+</style>
+<main>
+    <h1 class="main-heading">EduHub-Living</h1>
+    <h3>
+        Empowering Your Learning Journey
+
+    </h3>
+
+    <p>At EduHubLiving, we believe in fostering a dynamic and supportive environment for learners and educators alike. Our platform is designed to provide you with the tools, resources, and community you need to thrive in your educational endeavors</p>
+    <ul class="link-box">
+
+        <li>@Html.ActionLink("Education", "List", "Book", new { area = "" }, new { @class = "nav-link" })</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+        <li>@Html.ActionLink("Accommodations", "PublicPropertyListing", "PropertyListing", new { area = "" }, new { @class = "nav-link" })</li>
+    </ul>
+
+
+
+
+
+
+
 </main>
