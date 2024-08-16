@@ -42,7 +42,25 @@
             text-decoration: none;
             color: darkslategrey;
         }
+
+    .secondary_nav {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        gap: 4em;
+        list-style: none;
+        background-color: lightgrey;
+        padding: 1em;
+        margin: 0em auto 2em auto;
+    }
 </style>
+<ul class="secondary_nav">
+   
+    <li>@Html.ActionLink("Books", "List", "Book", new { area = "" }, new { @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Authors", "List", "Author", new { area = "" }, new { @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Genres", "List", "Genre", new { area = "" }, new { @class = "nav-link" })</li>
+</ul>
+
 <div class="flex-nav">
     <h2>List (<span>@Model.totalAuthors</span>) </h2>
     <a href="./New">New Author</a>
