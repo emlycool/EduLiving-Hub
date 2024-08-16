@@ -13,7 +13,7 @@ namespace EduLiving_Hub.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202408121642575_EmptyMigration"; }
+            get { return "202408121554411_EmptyMigration"; }
         }
         
         string IMigrationMetadata.Source
