@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
 using Newtonsoft.Json;
 using System.Web.Http.Routing;
 using System.Diagnostics;
+using System.Web.Mvc;
 
 namespace EduLiving_Hub.Models
 {
@@ -23,6 +23,8 @@ namespace EduLiving_Hub.Models
         public decimal SquareFootage { get; set; }
 
         public DateTime? AvailabilityDate { get; set; }
+        
+        [AllowHtml]
         public string Description { get; set; }
         public string Status { get; set; }
         public string Type { get; set; }
@@ -46,7 +48,7 @@ namespace EduLiving_Hub.Models
 
         public ICollection<Media> MediaItems { get; set; }
 
-        public PropertyListingDto ToPropertyListingDto(UrlHelper urlhelper)
+        public PropertyListingDto ToPropertyListingDto(System.Web.Http.Routing.UrlHelper urlhelper)
         {
             return new PropertyListingDto()
             {
@@ -127,6 +129,7 @@ namespace EduLiving_Hub.Models
 
 
         [Required(ErrorMessage = "Description is required")]
+        [AllowHtml]
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Status is required")]
